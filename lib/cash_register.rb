@@ -12,7 +12,7 @@ class CashRegister
   
   def apply_discount
     if self.discount != 0
-      self.total *= 100 - discount.fdiv(100)
+      self.total *= 10 - discount.fdiv(100)
     end
   end
   
