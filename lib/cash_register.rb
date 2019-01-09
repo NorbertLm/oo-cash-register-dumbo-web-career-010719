@@ -13,7 +13,7 @@ class CashRegister
     (1..quantity).each do |n|
       self.items.push(title)
     end
-    self.last.push[title, price * quantity]
+    self.last.push([title, price * quantity])
   end
   
   def apply_discount
