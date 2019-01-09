@@ -13,6 +13,7 @@ class CashRegister
   def apply_discount
     if self.discount != 0
       self.total *= 1 - discount.fdiv(100)
+      self.total = self.total.to_i
     end
     "After the discount, the total comes to $#{self.total}."
   end
