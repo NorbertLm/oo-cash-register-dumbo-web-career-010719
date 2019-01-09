@@ -14,7 +14,7 @@ class CashRegister
     if self.discount != 0
       self.total *= 1 - discount.fdiv(100)
     end
-    puts "After the discount, the total comes to #{self.total}."
+    "After the discount, the total comes to #{self.total}."
   end
   
 end
