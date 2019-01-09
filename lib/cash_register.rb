@@ -1,10 +1,11 @@
 class CashRegister
-  attr_accessor :total, :discount, :items
+  attr_accessor :total, :discount, :items, :last
   
   def initialize(discount=0)
     @total = 0
     @discount = discount
     @items = []
+    @last = []
   end
   
   def add_item(title, price, quantity=1)
@@ -12,6 +13,7 @@ class CashRegister
     (1..quantity).each do |n|
       self.items.push(title)
     end
+    self.last.push(title)
   end
   
   def apply_discount
@@ -24,4 +26,6 @@ class CashRegister
     "After the discount, the total comes to $#{self.total}."
   end
   
+  def void_last_transaction
+    
 end
